@@ -21,6 +21,15 @@ const config: HardhatUserConfig = {
                         runs: 200
                     }
                 }
+            },
+            {
+                version: "0.8.20",
+                settings: {
+                    optimizer: {
+                        enabled: true,
+                        runs: 200
+                    }
+                }
             }
         ]
     },
@@ -120,7 +129,7 @@ const config: HardhatUserConfig = {
                 chainId: 10241025,
                 urls: {
                     apiURL: "https://hal.explorer.caldera.xyz/api",
-                    browserURL: "https://hal.explorer.caldera.xyz/", // https://hal-explorer.alienxchain.io/
+                    browserURL: "https://hal-explorer.alienxchain.io/", // "https://hal.explorer.caldera.xyz/"
                 },
             },
         ]
