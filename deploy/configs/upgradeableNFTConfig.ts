@@ -26,7 +26,13 @@ export const networkConfig: networkConfigInfo = {
         name: "Upgradeable NFT",
         symbol: "UNFT",
     },
-}
+
+    2494104990: {
+        networkName: "shasta",
+        name: "Upgradeable NFT",
+        symbol: "UNFT",
+    }
+};
 
 export const developmentChains = ["hardhat", "localhost"];
 export const VERIFICATION_BLOCK_CONFIRMATIONS = 1;

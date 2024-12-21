@@ -106,6 +106,7 @@ const config: HardhatUserConfig = {
         },
 
         shasta: {
+            chainId: 2494104990,
             url: "https://api.shasta.trongrid.io/jsonrpc",
             accounts: [process.env.TRON_PRIVATE_KEY!],
             httpHeaders: { "TRON-PRO-API-KEY": process.env.TRON_PRO_API_KEY! },
@@ -113,6 +114,7 @@ const config: HardhatUserConfig = {
         }, // explorer: https://shasta.tronscan.io/
 
         nile: {
+            chainId: 3448148188,
             url: "https://nile.trongrid.io/jsonrpc",
             accounts: [process.env.TRON_PRIVATE_KEY!],
             httpHeaders: { "TRON-PRO-API-KEY": process.env.TRON_PRO_API_KEY! },
