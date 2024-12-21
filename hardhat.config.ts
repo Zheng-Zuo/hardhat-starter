@@ -31,22 +31,23 @@ const config: HardhatUserConfig = {
                         runs: 200
                     }
                 }
-            }
+            },
         ]
     },
 
     tronSolc: {
         enable: true,
         filter: [],
-        compilers: [{
-            version: "0.8.20",
-            settings: {
-                optimizer: {
-                    enabled: true,
-                    runs: 200
+        compilers: [
+            {
+                version: "0.8.20",
+                settings: {
+                    optimizer: {
+                        enabled: true,
+                        runs: 200
+                    }
                 }
-            }
-        }],
+            }],
         // Optional: Define version remappings for compiler versions
         versionRemapping: [
             ["0.8.22", "0.8.20"],
