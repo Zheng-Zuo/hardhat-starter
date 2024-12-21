@@ -1,7 +1,7 @@
 {
     "upgradeableNFT": {
-        "proxy": "0xEd952A9E6C0eBAfebDd50C7c77501DBfad94fEd2",
-        "admin": "0x39a05FFf0C98e6E9714Bb3618A40A333f1a4c9bE",
-        "implementation": "0x795D3381F462F0cB2A9c4F75a34Ec14935C6BE29"
+        "proxy": "0x64aEC2a0c30e1C57b555656F5cfEC0B1e3fA5754",
+        "admin": "0xD409F4E87a106942C59E59767bC6259a1d7332ea",
+        "implementation": "0xE0864717BC46Db2B75877306d91123859463EE72"
     }
 }

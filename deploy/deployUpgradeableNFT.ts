@@ -40,7 +40,11 @@ const deployContract: DeployFunction = async function (hre: HardhatRuntimeEnviro
                     methodName: "initialize",
                     args: upgradeableNFTArgs
                 }
-            }
+            },
+            viaAdminContract: {
+                name: "NFTProxyAdmin",
+                artifact: "NFTProxyAdmin",
+            },
         }
     });
 
