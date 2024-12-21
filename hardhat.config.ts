@@ -1,6 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-deploy";
+import "@layerzerolabs/hardhat-tron";
 import "@openzeppelin/hardhat-upgrades";
 import { ProxyAgent, setGlobalDispatcher } from "undici";
 import "dotenv/config";
@@ -32,6 +33,24 @@ const config: HardhatUserConfig = {
                 }
             }
         ]
+    },
+
+    tronSolc: {
+        enable: true,
+        filter: [],
+        compilers: [{
+            version: "0.8.20",
+            settings: {
+                optimizer: {
+                    enabled: true,
+                    runs: 200
+                }
+            }
+        }],
+        // Optional: Define version remappings for compiler versions
+        versionRemapping: [
+            ["0.8.22", "0.8.20"],
+        ],
     },
 
     defaultNetwork: "hardhat",
@@ -84,6 +103,20 @@ const config: HardhatUserConfig = {
             url: "https://hal.rpc.caldera.xyz/http",
             accounts: { mnemonic: process.env.MNEMONIC! },
         },
+
+        shasta: {
+            url: "https://api.shasta.trongrid.io/jsonrpc",
+            accounts: [process.env.TRON_PRIVATE_KEY!],
+            httpHeaders: { "TRON-PRO-API-KEY": process.env.TRON_PRO_API_KEY! },
+            tron: true,
+        }, // explorer: https://shasta.tronscan.io/
+
+        nile: {
+            url: "https://nile.trongrid.io/jsonrpc",
+            accounts: [process.env.TRON_PRIVATE_KEY!],
+            httpHeaders: { "TRON-PRO-API-KEY": process.env.TRON_PRO_API_KEY! },
+            tron: true,
+        }, // explorer: https://nile.tronscan.org/
     },
 
     etherscan: {
@@ -96,6 +129,7 @@ const config: HardhatUserConfig = {
             sepolia: process.env.ETHERSCAN_API_KEY!,
             arbitrumSepolia: process.env.ARBSCAN_API_KEY!,
             hal: "NO_KEY_NEEDED",
+            nile: "NO_KEY_NEEDED"
         },
         customChains: [
             // Mainnet

@@ -1,6 +1,6 @@
 import yargs from "yargs/yargs";
 import dotenv from "dotenv";
-import artifacts from "../../artifacts/contracts/TRC20Token.sol/TRC20Token.json";
+import artifacts from "../../artifacts-tron/contracts/TRC20Token.sol/TRC20Token.json";
 const TronWeb = require('tronweb');
 dotenv.config();
 
